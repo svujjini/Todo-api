@@ -32,32 +32,31 @@ sequelize.sync({
 		}
 	});
 
+	// Todo.create({
+	// 	description: 'Take out trash'
+	// }).then(function(todo) {
+	// 	return Todo.create({
+	// 		description: 'Clean office'
+	// 	});
+	// }).then(function() {
+	// 	// return Todo.findById(1)
+	// 	return Todo.findAll({
+	// 		where: {
+	// 			description: {
+	// 				$like: '%Office%'
+	// 			}
+	// 		}
+	// 	});
+	// }).then(function (todos) {
+	// 	if (todos) {
+	// 		todos.forEach(function (todo) {
+	// 			console.log(todo.toJSON());
+	// 		});
 
-	 /*Todo.create({
-	 	description: 'Take out trash'
-	 }).then(function(todo) {
-	 	return Todo.create({
-	 		description: 'Clean office'
-	 	});
-	 }).then(function() {
-	 	// return Todo.findById(1)
-	 	return Todo.findAll({
-	 		where: {
-	 			description: {
-	 				$like: '%Office%'
-	 			}
-	 		}
-	 	});
-	 }).then(function (todos) {
-	 	if (todos) {
-	 		todos.forEach(function (todo) {
-	 			console.log(todo.toJSON());
-	 		});
-	
-	 	} else {
-	 		console.log('no todo found!');
-	 	}
-	 }).catch(function(e) {
-	 	console.log(e);
-	 });*/
+	// 	} else {
+	// 		console.log('no todo found!');
+	// 	}
+	// }).catch(function(e) {
+	// 	console.log(e);
+	// });
 });
