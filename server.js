@@ -133,8 +133,16 @@ app.post('/users', function (req, res) {
 app.post('/users/login', function (req, res) {
 	var body = _.pick(req.body, 'email', 'password');
 
+<<<<<<< HEAD
 	db.user.authenticate(body).then(function (user) {
 		var token = user.generateToken('authentication');
+=======
+		db.user.authenticate(body).then(function(user) {
+			res.header('Auth', user.generateToken('authentication')).json(user.toPublicJSON());
+		}, function() {
+       res.status(401).send();
+		});
+>>>>>>> 15defc24bb20ffe91e7ee95b0e27eb392f16c06c
 
 		if (token) {
 			res.header('Auth', token).json(user.toPublicJSON());
