@@ -102,7 +102,7 @@ module.exports = function(sequelize, DataTypes) {
 						id: this.get('id'),
 						type: type
 					});
-<<<<<<< HEAD
+
 					var encryptedData = cryptojs.AES.encrypt(stringData, 'abc123!@#!').toString();
 					var token = jwt.sign({
 						token: encryptedData
@@ -112,7 +112,7 @@ module.exports = function(sequelize, DataTypes) {
 				} catch (e) {
 					console.error(e);
 					return undefined;
-=======
+
 				}
 			},
 			instanceMethods: {
@@ -136,7 +136,6 @@ module.exports = function(sequelize, DataTypes) {
 						 console.error(e);
 						 return undefined;
 					}
->>>>>>> 15defc24bb20ffe91e7ee95b0e27eb392f16c06c
 				}
 			}
 		}
